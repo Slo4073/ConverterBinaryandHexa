@@ -1,0 +1,41 @@
+﻿@model AS1.Models.Conversion;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2 class="text-center"> Converter</h2>
+<br />
+<div class="card">
+    <form class="form-inline" method="post">
+        <div class="col-sm">
+            <h3>Decimal</h3>
+            <input type="text" class="form-control" aria-label="Decimal1" id="Decimal1" name="Decimal1" value="@Model.Decimal1">
+        </div>
+        <div class="col-sm">
+            <h3>Binary</h3>
+            <input type="text" class="form-control" aria-label="Binary" id="Binary" name="Binary" value="@Model.Binary">
+
+        </div>
+        <br />
+        <button type="submit" class="btn btn-info btn-lg" id="ConvertB" name="ConvertSL" value="ConvertB">Convert</button>
+    </form>
+</div>
+
+@*<h2>Decimal to Hexa Decimal</h2>*@
+<br />
+
+<form class="form-inline" method="post">
+    <div class="col-sm">
+        <h3>Decimal</h3>
+        <input type="text" class="form-control" aria-label="Decimal2" id="Decimal2" name="Decimal2" value="@Model.Decimal2">
+    </div>
+    <div class="col-sm">
+        <h3>Hexa Decimal</h3>
+        <input type="text" class="form-control" aria-label="HexaDecimal" id="HexaDecimal" name="HexaDecimal" value="@Model.HexaDecimal">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-info btn-lg" style="align-self:center" id="ConvertH" name="ConvertSL" value="ConvertH">Convert</button>
+</form>
+
+
