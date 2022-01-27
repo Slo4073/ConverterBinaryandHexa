@@ -19,6 +19,7 @@
         </div>
         <br />
         <button type="submit" class="btn btn-info btn-lg" id="ConvertB" name="ConvertSL" value="ConvertB">Convert</button>
+        <button class="toogleBold">BOLD</button>
     </form>
 </div>
 
@@ -37,5 +38,16 @@
     <br />
     <button type="submit" class="btn btn-info btn-lg" style="align-self:center" id="ConvertH" name="ConvertSL" value="ConvertH">Convert</button>
 </form>
-
-
+<script>
+    $(".toogleBold").click(function () {
+        document.getElementById("Decimal1").classList.toggle("bold1");
+    });
+    $(".toogleBold").click(function () {
+        document.getElementById("Binary").classList.toggle("bold1");
+    });
+</script>
+<style>
+    .bold1 {
+        font-weight: bold;
+    }
+</style>
