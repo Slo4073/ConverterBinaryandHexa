@@ -42,7 +42,7 @@
 <br />
 <div class="flex-column flex-md-column">
     <button class="toogleBold btn btn-lg btn-outline-info">Bold</button>
-    <button class="toogleIta btn btn-lg btn-dark">Italicized</button>
+    <button class="toogleIta btn btn-lg btn-dark" onclick="myFunction()">Italicized</button>
 </div>
 <script>
     
@@ -70,6 +70,20 @@
     $(".toogleIta").click(function () {
         document.getElementById("HexaDecimal").classList.toggle("it1");
     });
+    var str = document.getElementById("HexaDecimal");
+    var strItalic = new String("Italic");
+    function myFunction() {
+
+        // Toggling between normal and italic
+        if (str.innerHTML == "Normal") {
+
+            // Using italics() to italicize
+            str.innerHTML = strItalic.italics();
+        }
+        else {
+            str.innerHTML = "Normal";
+        }
+    }
 </script>
 <style>
     .bold1 {
