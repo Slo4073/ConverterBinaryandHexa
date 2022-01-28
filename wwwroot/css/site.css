@@ -61,7 +61,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    font-family: 'Poppins', sans-serif;
+    
 }
 .footer {
   position: absolute;
@@ -80,4 +80,9 @@ input[type="text"] {
 input[type="text"]:focus{
     background-color: #218060;
     color: black;
+}
+
+.bold1 {
+    font-weight: bold;
+    
 }

@@ -6,22 +6,23 @@
 
 <h2 class="text-center"> Converter</h2>
 <br />
-<div class="card">
-    <form class="form-inline" method="post">
-        <div class="col-sm">
-            <h3>Decimal</h3>
-            <input type="text" class="form-control" aria-label="Decimal1" id="Decimal1" name="Decimal1" value="@Model.Decimal1">
-        </div>
-        <div class="col-sm">
-            <h3>Binary</h3>
-            <input type="text" class="form-control" aria-label="Binary" id="Binary" name="Binary" value="@Model.Binary">
 
-        </div>
-        <br />
-        <button type="submit" class="btn btn-info btn-lg" id="ConvertB" name="ConvertSL" value="ConvertB">Convert</button>
-        <button class="toogleBold">BOLD</button>
-    </form>
-</div>
+<form class="form-inline" method="post">
+    <div class="col-sm">
+        <h3>Decimal</h3>
+        <input type="text" class="form-control" aria-label="Decimal1" id="Decimal1" name="Decimal1" value="@Model.Decimal1">
+    </div>
+    <div class="col-sm">
+        <h3>Binary</h3>
+        <input type="text" class="form-control" aria-label="Binary" id="Binary" name="Binary" value="@Model.Binary">
+
+    </div>
+    <br />
+    <button style="margin-right:15px" type="submit" class="btn btn-info btn-lg" id="ConvertB" name="ConvertSL" value="ConvertB">Convert</button>
+    
+    
+</form>
+
 
 
 <br />
@@ -36,18 +37,49 @@
         <input type="text" class="form-control" aria-label="HexaDecimal" id="HexaDecimal" name="HexaDecimal" value="@Model.HexaDecimal">
     </div>
     <br />
-    <button type="submit" class="btn btn-info btn-lg" style="align-self:center" id="ConvertH" name="ConvertSL" value="ConvertH">Convert</button>
+    <button type="submit" class="btn btn-info btn-lg" style="align-self:center;margin-right:15px" id="ConvertH" name="ConvertSL" value="ConvertH">Convert</button>
 </form>
+<br />
+<div class="flex-column flex-md-column">
+    <button class="toogleBold btn btn-lg btn-outline-info">Bold</button>
+    <button class="toogleIta btn btn-lg btn-dark">Italicized</button>
+</div>
 <script>
+    
     $(".toogleBold").click(function () {
         document.getElementById("Decimal1").classList.toggle("bold1");
     });
     $(".toogleBold").click(function () {
         document.getElementById("Binary").classList.toggle("bold1");
     });
+    $(".toogleBold").click(function () {
+        document.getElementById("Decimal2").classList.toggle("bold1");
+    });
+    $(".toogleBold").click(function () {
+        document.getElementById("HexaDecimal").classList.toggle("bold1");
+    });
+    $(".toogleIta").click(function () {
+        document.getElementById("Decimal1").classList.toggle("it1");
+    });
+    $(".toogleIta").click(function () {
+        document.getElementById("Binary").classList.toggle("it1");
+    });
+    $(".toogleIta").click(function () {
+        document.getElementById("Decimal2").classList.toggle("it1");
+    });
+    $(".toogleIta").click(function () {
+        document.getElementById("HexaDecimal").classList.toggle("it1");
+    });
 </script>
 <style>
     .bold1 {
         font-weight: bold;
     }
+
+    .it1 {
+        font-style: italic;
+    }
 </style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
