@@ -43,9 +43,10 @@
 <div class="flex-column flex-md-column">
     <button class="toogleBold btn btn-lg btn-outline-info">Bold</button>
     <button class="toogleIta btn btn-lg btn-dark" onclick="myFunction()">Italicized</button>
+    <button class=" btn btn-lg btn-danger" onclick="reverse()">Reverse</button>
 </div>
 <script>
-    
+    //Bold
     $(".toogleBold").click(function () {
         document.getElementById("Decimal1").classList.toggle("bold1");
     });
@@ -70,6 +71,7 @@
     $(".toogleIta").click(function () {
         document.getElementById("HexaDecimal").classList.toggle("it1");
     });
+    //Italic
     var str = document.getElementById("HexaDecimal");
     var strItalic = new String("Italic");
     function myFunction() {
@@ -83,6 +85,12 @@
         else {
             str.innerHTML = "Normal";
         }
+    }
+    //reverse
+    function reverse() {
+        var x = document.getElementById("Decimal1").value;
+
+        document.getElementById("Decimal1").value = x.split("").reverse().join("");
     }
 </script>
 <style>
